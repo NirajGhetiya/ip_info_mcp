@@ -79,7 +79,7 @@ A Python-based MCP (Model Context Protocol) server that fetches IP address geolo
          "IPInfoServer": {
            "type": "stdio",
            "command": "uv",
-           "args": ["run", "src/ipinfo_mcp_server/server.py"]
+           "args": ["run", "main.py"]
          }
        }
      }
@@ -111,9 +111,7 @@ A Python-based MCP (Model Context Protocol) server that fetches IP address geolo
 ```
 ipinfo-mcp-server/
 ├── .venv/                # Virtual environment
-├── src/
-│   └── ipinfo_mcp_server/
-│       └── server.py     # MCP server implementation
+├── main.py     # MCP server implementation
 ├── .vscode/
 │   └── mcp.json          # VS Code MCP configuration
 ├── .gitignore            # Git ignore file
@@ -140,7 +138,7 @@ To use an API key for higher rate limits:
        "IPInfoServer": {
          "type": "stdio",
          "command": "uv",
-         "args": ["run", "src/ipinfo_mcp_server/server.py"],
+         "args": ["run", "main.py"],
          "env": {
            "IPAPI_KEY": "${input:ipapi_key}"
          }
