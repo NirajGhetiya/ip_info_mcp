@@ -6,7 +6,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("IPInfoServer")
 
 # Constants
-IPAPI_BASE = "https://ipapi.co"
+IPAPI_BASE = "https://ipapi.c
 
 @mcp.tool()
 async def get_ip_info(ip_address: str) -> Dict[str, Any]:
